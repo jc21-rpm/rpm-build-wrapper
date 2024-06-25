@@ -7,9 +7,15 @@ to help build the RPM inside an applicable docker container.
 
 ```bash
 # build with rocky 8
-./build 8
+./build.sh 8
 # build with rocky 9
-./build 9
+./build.sh 9
+```
+
+Run directly from the official site:
+
+```bash
+/bin/bash -c "$(curl -fsSL https://yum.jc21.com/build.sh)" -- 9
 ```
 
 Building with language specific docker images
@@ -17,7 +23,7 @@ Building with language specific docker images
 See [one of the rpmbuild image tags](https://hub.docker.com/r/jc21/rpmbuild-rocky9/tags) for possible options.
 
 ```bash
-./build 9 golang
-./build 9 rust
-./build 9 haskell
+./build.sh 9 golang
+./build.sh 9 rust
+./build.sh 9 haskell
 ```
